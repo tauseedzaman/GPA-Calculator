@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	body{
+	width:100%;
+	height:100%;
+	background:black;
+	}
+	*{
+		margin:0;
+	}
+	/*css class for input fiels*/
+	.w{
+		width: 60%;
+		font-size:20px;
+		padding:5px;
+		margin-bottom:5px;
+		border-width: 3px;
+		border-color: blue yellow yellow blue;
+		border-radius: 10px 0 10px 0;
+		color:blanchedalmond;
+		margin-top:11px;
+		background:black;
+
+	}
+	/*css class for button*/
+	.btn{
+		font-size:20px;
+		padding:5px;
+		margin-bottom:5px;
+		border-style: outset;
+		border-width: 5px;
+		border-color: yellow blue blue yellow;
+		border-radius: 10px 0 10px 0;
+		background:black;
+		color:cyan;
+		margin-top:11px;
+	}
+</style>
+
+</head>
+	<body>	
+	</center>
+
+		<center>	<h1 style="padding:10px;color:yellow">GPA Calculator</h1></center>
+		<center><p style="color:red">Enter subjects obtaned marks and click on calulate gpa button</p></center>
+		<center><input type="text" placeholder="Enter Data Structure marks" id="DS" style="" class="w"></center>
+		<center><input type="text" placeholder="Enter Discrede Maths marks" id="DM" style=""  class="w"></center>
+		<center><input type="text" placeholder="Enter DLD marks" id="DLD" style=""  class="w"></center>
+		<center><input type="text" placeholder="Enter Basics Electronics marks" class="w" id="BE" style=""></center>
+		<center><input type="text" placeholder="Enter statistics marks" id="ST" class="w" style=""></center>
+		<center><input type="text" placeholder="Enter English marks" id="ENG" class="w" style=""></center>
+		<center><input type="button" id="btn" onclick="fn1()" value="Calulat GPA" style="" class="btn"></center>
+		<p style="color: cyan;text-align: center;margin-top: 20px">Auther: Tauseed Zaman </p>
+	</body>
+	<script type="text/javascript">
+	// javascript function for calculating the gpa
+	function fn1(){
+
+		var DS = document.getElementById('DS').value;
+		var DM = document.getElementById('DM').value;
+		
+		var c = document.getElementById('DLD').value;
+		var BE = document.getElementById('BE').value;
+		var ST = document.getElementById('ST').value;
+		var ENG = document.getElementById('ENG').value;
+		var r_DS = (((DS/85) *4)*3);
+		var r_DM =((( DM/85) *4)*3);
+		var r_c = (((c/85) *4)*3);
+		var r_BE = (((BE/85) *4)*3);
+		var r_ST = (((ST/85) *4)*3);
+		var r_ENG = (((ENG/85) *4)*3);
+		var total =r_DS+r_DM+r_c+r_BE+r_ST+r_ENG;
+		var gpa = total/18;
+		alert("your GPA is : "+gpa);
+	}	
+		
+	</script>
+</html>
