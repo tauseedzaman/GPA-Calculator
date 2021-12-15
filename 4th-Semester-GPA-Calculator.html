@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	body{
+	width:100%;
+	height:100%;
+	background:black;
+	}
+	*{
+		margin:0;
+	}
+	/*css class for input fiels*/
+	.w{
+		width: 60%;
+		font-size:20px;
+		padding:5px;
+		margin-bottom:5px;
+		border-width: 3px;
+		border-color: blue yellow yellow blue;
+		border-radius: 10px 0 10px 0;
+		color:blanchedalmond;
+		margin-top:11px;
+		background:black;
+
+	}
+	/*css class for button*/
+	.btn{
+		font-size:20px;
+		padding:5px;
+		margin-bottom:5px;
+		border-style: outset;
+		border-width: 5px;
+		border-color: yellow blue blue yellow;
+		border-radius: 10px 0 10px 0;
+		background:black;
+		color:cyan;
+		margin-top:11px;
+	}
+</style>
+
+</head>
+	<body>	
+	</center>
+
+		<center>	<h1 style="padding:10px;color:yellow">GPA Calculator <small style="color:lime;font-size: small;">CS 4 <sup>th</sup> Semester only</small></h1></center>
+		<center><p style="color:red">Enter subjects obtaned marks and click on Calculate GPA button</p></center>
+		<center><input type="text" placeholder="Enter Database administration marks" id="DBA" style="" class="w"></center>
+		<center><input type="text" placeholder="Enter Linear Algebra marks" id="LAP" style=""  class="w"></center>
+		<center><input type="text" placeholder="Enter Assembly marks" id="ASM" style=""  class="w"></center>
+		<center><input type="text" placeholder="Enter differential equation marks" class="w" id="DFE" style=""></center>
+		<center><input type="text" placeholder="Enter s/w eng-1 marks" id="sweng1" class="w" style=""></center>
+
+		<center><input type="button" id="btn" onclick="fn1()" value="Calculate GPA" style="" class="btn"></center>
+		<p style="color: cyan;text-align: center;margin-top: 20px">Auther: Tauseed Zaman </p>
+	</body>
+	<script type="text/javascript">
+
+	function fn1(){
+
+		var DBA = document.getElementById('DBA').value;
+		var LAP = document.getElementById('LAP').value;
+		
+		var c = document.getElementById('ASM').value;
+		var DFE = document.getElementById('DFE').value;
+		var sw = document.getElementById('sweng1').value;
+		let t=85;
+		var r_DBA = (((DBA/t ) *4)*3); //.
+		var r_LAP = ((( LAP/t) *4)*3); //.
+		var r_c =   (((c/t  ) *4)*4); //.
+		var r_DFE = (((DFE/t ) *4)*3); //.
+		var r_sw =  (((sw/t) *4)*3); //,
+
+		var total =r_DBA+r_LAP+r_c+r_DFE+r_sw;
+		var gpa = total/16;
+		alert("your GPA is : "+gpa);
+	}	
+		
+	</script>
+</html>
